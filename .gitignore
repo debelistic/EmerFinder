@@ -30,6 +30,8 @@ bower_components
 .lock-wscript
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
+dist
+build
 build/Release
 
 # Dependency directories
@@ -56,6 +58,7 @@ typings/
 
 # dotenv environment variables file
 .env
+.env.production
 
 # next.js build output
 .next
