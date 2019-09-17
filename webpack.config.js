@@ -19,11 +19,20 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: ['@babel/preset-env', '@babel/react'],
-        },
+          plugins: ['@babel/plugin-transform-runtime']
+        }
       },
       {
-        test: /\.css$/,
-        loader: ['style-loader', 'css-loader'],
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
       },
     ],
   },
