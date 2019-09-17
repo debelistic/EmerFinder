@@ -1,14 +1,12 @@
 language: node_js
 node_js:
   - "stable"
-install:
-  - npm install
+before_script:
+  - npm install nyc coveralls
 cache:
   directories:
     - node_modules
 script:
-  - npm test -- --coverage
-services:
-  - postgresql
-after_script:
-  - COVERALLS_REPO_TOKEN=$coveralls_repo_token npm run coveralls
+  - npm test
+after_success:
+  - npm run coveralls
