@@ -7,6 +7,7 @@
     "start": "set DEBUG=prod && node server/app.js",
     "dev": "webpack-dev-server --open --config build-utils/webpack.config.js --env.env=dev",
     "build": "webpack --config build-utils/webpack.config.js --env.env=prod",
+    "ci-build": "webpack --config build-utils/webpack.config.js --env.env=test",
     "eslint-fix": "eslint --fix \"src/**/*.js\"",
     "test": "jest --coverage",
     "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
